@@ -1,6 +1,6 @@
 ## LAB 01
 
-# Strategies Applied to solve the problem
+# Strategies Adopted to solve the problem
 
 ### Legend:
 
