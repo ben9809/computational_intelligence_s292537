@@ -63,7 +63,7 @@ I chose the binary tournament selection (T=2) as the method for parent selection
 
 **Crossover Operator**
 
-The crossover operator works by randomly generating one or more crossover point(s) and the swapping segments ot the two parents vectors to produce two child vectors. The one-point crossover has been adopted in this implementation of the GA algorithm. Once the crossover point is generated $0<k<n$, the child reported as solution of the crossover operator is:  $C = P_1[0],...,P_1[k-1],P_2[k],...,P_2[n]$.
+The crossover operator works by randomly generating one or more crossover point(s) and the swapping segments ot the two parents vectors to produce two child vectors. The one-point crossover has been adopted in this implementation of the GA algorithm. Once the crossover point is generated $(0<k<n)$, the child reported as solution of the crossover operator is:  $C = P_1[0],...,P_1[k-1],P_2[k],...,P_2[n]$.
 
 **Mutation Rate**
 
