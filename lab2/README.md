@@ -16,6 +16,7 @@ such that each number between $0$ and $N-1$ appears in at least one list
 
 $$
 \forall n \in [0, N-1] \ \exists i : n \in L_{s_i}
+
 $$
 
 and that the total numbers of elements in all $L_{s_i}$ is minimum.
@@ -41,7 +42,7 @@ A GA emulates these processes starting by an initial population of individuals a
 
 **Representation and fitness function**
 
-The first step is designing a genetic algorithm for this particular problem. The 0-1 binary representation is a good choice for the set covering problem since it represents the underlying 0-1 integer variables. I used a $n$-bit binary vector as the genome structure where $n$ is the cardinality of $P$ ($n=|P|$). A value of 1 for the $i$-th bit implies that the list $L_i$ is in the solution.
+The first step is designing a genetic algorithm for this particular problem. The 0-1 binary representation is a good choice for the set covering problem since it represents the underlying 0-1 integer variables. I used a $n$-bit binary vector as the genome structure where $n$ is the cardinality of $P (n=|P|)$. A value of 1 for the $i$-th bit implies that the list $L_i$ is in the solution.
 
 The binary representation of an individual's genome for the set covering problem is illustrated below.
 
@@ -63,7 +64,7 @@ I chose the binary tournament selection (T=2) as the method for parent selection
 
 **Crossover Operator**
 
-The crossover operator works by randomly generating one or more crossover point(s) and the swapping segments ot the two parents vectors to produce two child vectors. The one-point crossover has been adopted in this implementation of the GA algorithm. Once the crossover point is generated $ 0<k<n$, the child reported as solution of the crossover operator is:  $C = P_1[0],...,P_1[k-1],P_2[k],...,P_2[n]$.
+The crossover operator works by randomly generating one or more crossover point(s) and the swapping segments ot the two parents vectors to produce two child vectors. The one-point crossover has been adopted in this implementation of the GA algorithm. Once the crossover point is generated $0<k<n$, the child reported as solution of the crossover operator is:  $C = P_1[0],...,P_1[k-1],P_2[k],...,P_2[n]$.
 
 **Mutation Rate**
 
@@ -83,6 +84,7 @@ In this implementation of the GA algorithm, some parameter have been tuned to pr
 To evaluate the model I decided to use as evaluation metrics the number of total covered element considering the duplicates. This metric is called WEIGHT.
 
 <h5> Computational Results </h5>
+
 
 | N    | WEIGHT | BLOAT | POPULATION_SIZE | N_GENERATIONS | MUTATION_RATE |
 | ---- | ------ | ----- | --------------- | ------------- | ------------- |
